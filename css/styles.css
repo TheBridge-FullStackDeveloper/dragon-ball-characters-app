@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******** nuestras css *******/
+
+:root {
+  --orange: #e76a24;
+  --yellow: #fbbc42;
+  --blue: #1c4595;
+  --white: #e7e5e8;
+}
+
+body {
+  background: rgb(39, 43, 51);
+  color: var(--white);
+  padding: 20px;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  height: 150px;
+  position: sticky;
+  top: 0px;
+  background-color: rgb(39, 43, 51);
+  z-index: 999;
+}
+
+.container_logo {
+  height: 100%;
+}
+
+.img_logo {
+  height: 100%;
+}
+
+.searcher {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchInput {
+  border-radius: 5px;
+  height: 25px;
+}
+
+.characters,
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin: 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: rgb(60, 62, 68);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card_favorite {
+  background-color: #1c4595;
+}
+
+.container_img {
+  text-align: center;
+  height: 350px;
+  background-image: url("https://web.dragonball-api.com/images-compress/89980.webp");
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.img_character {
+  height: 100%;
+  transition: all 1s ease;
+  z-index: 9;
+}
+
+.img_character:hover {
+  transform: scale(1.2);
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 99;
+  margin: 15px;
+}
+
+.info_white {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.info_orange {
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.btn_prev,
+.btn_next {
+  background-color: var(--yellow);
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  width: 150px;
+}
+
+.btn_prev:hover,
+.btn_next:hover {
+  cursor: pointer;
+}
+
+.btn_favorites {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  background: transparent;
+  border: none;
+  width: 150px;
+}
+
+.btn_favorites:hover {
+  cursor: pointer;
+}
+
+.img_favorites {
+  width: 100%;
+}
+
+.btn_home {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  width: 150px;
+}
+
+.img_home {
+  width: 100%;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+button:disabled:hover {
+  cursor: no-drop;
+}
